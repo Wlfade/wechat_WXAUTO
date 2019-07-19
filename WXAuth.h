@@ -16,9 +16,11 @@
 //全局管理对象
 + (WXAuth *)sharedInstance;
 
+- (NSString *)getWXAppId;
+
 - (BOOL)handleOpenURL:(NSURL *)url;
 
-//- (void)sendWXAuthReq;
+- (void)sendWXAuthReq;
 //- (void)sendWXMessageAuthReq;
 
 
