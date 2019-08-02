@@ -15,7 +15,6 @@
 		4E18986E22D46E0400664AB8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E18986D22D46E0400664AB8 /* main.m */; };
 		4E18987822D46E0400664AB8 /* DCShanreTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E18987722D46E0400664AB8 /* DCShanreTestTests.m */; };
 		4E18988322D46E0400664AB8 /* DCShanreTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E18988222D46E0400664AB8 /* DCShanreTestUITests.m */; };
-		4E1D76A222D5C4E800C7E46B /* WXAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1D76A122D5C4E800C7E46B /* WXAuth.m */; };
 		4E1D76A422D5C7F400C7E46B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E1D76A322D5C7F400C7E46B /* SystemConfiguration.framework */; };
 		4E1D76A622D5C81600C7E46B /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E1D76A522D5C81600C7E46B /* libz.tbd */; };
 		4E1D76A822D5C83F00C7E46B /* libc++abi.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E1D76A722D5C83F00C7E46B /* libc++abi.tbd */; };
@@ -26,6 +25,7 @@
 		4E1D76B222D5C88A00C7E46B /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E1D76B122D5C88A00C7E46B /* CFNetwork.framework */; };
 		4E1D76B422D5C89200C7E46B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E1D76B322D5C89200C7E46B /* Security.framework */; };
 		4E1D76B622D6DC5B00C7E46B /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E1D76B522D6DC5B00C7E46B /* libc++.tbd */; };
+		4EDBA19822F43C83006A77EA /* WXAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EDBA19622F43C83006A77EA /* WXAuth.m */; };
 		63B644DFA5BD689FC4A74F71 /* libPods-DCShanreTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE7DFF79C40B50A89EA95A1E /* libPods-DCShanreTest.a */; };
 /* End PBXBuildFile section */
 
@@ -63,8 +63,6 @@
 		4E18987E22D46E0400664AB8 /* DCShanreTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DCShanreTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E18988222D46E0400664AB8 /* DCShanreTestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCShanreTestUITests.m; sourceTree = "<group>"; };
 		4E18988422D46E0400664AB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4E1D76A022D5C4E800C7E46B /* WXAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WXAuth.h; path = "../../微信分享/hongyantub2b/WXAuth.h"; sourceTree = "<group>"; };
-		4E1D76A122D5C4E800C7E46B /* WXAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WXAuth.m; path = "../../微信分享/hongyantub2b/WXAuth.m"; sourceTree = "<group>"; };
 		4E1D76A322D5C7F400C7E46B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		4E1D76A522D5C81600C7E46B /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		4E1D76A722D5C83F00C7E46B /* libc++abi.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++abi.tbd"; path = "usr/lib/libc++abi.tbd"; sourceTree = SDKROOT; };
@@ -75,6 +73,8 @@
 		4E1D76B122D5C88A00C7E46B /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		4E1D76B322D5C89200C7E46B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		4E1D76B522D6DC5B00C7E46B /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		4EDBA19622F43C83006A77EA /* WXAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXAuth.m; sourceTree = "<group>"; };
+		4EDBA19722F43C83006A77EA /* WXAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXAuth.h; sourceTree = "<group>"; };
 		93480A64D01DCB8A0A5F6965 /* Pods-DCShanreTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DCShanreTest.release.xcconfig"; path = "Target Support Files/Pods-DCShanreTest/Pods-DCShanreTest.release.xcconfig"; sourceTree = "<group>"; };
 		98AF8693585A241A96EFBD4A /* Pods-DCShanreTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DCShanreTest.debug.xcconfig"; path = "Target Support Files/Pods-DCShanreTest/Pods-DCShanreTest.debug.xcconfig"; sourceTree = "<group>"; };
 		AE7DFF79C40B50A89EA95A1E /* libPods-DCShanreTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DCShanreTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,8 +145,8 @@
 				4E18985F22D46E0300664AB8 /* AppDelegate.m */,
 				4E18986122D46E0300664AB8 /* ViewController.h */,
 				4E18986222D46E0300664AB8 /* ViewController.m */,
-				4E1D76A022D5C4E800C7E46B /* WXAuth.h */,
-				4E1D76A122D5C4E800C7E46B /* WXAuth.m */,
+				4EDBA19722F43C83006A77EA /* WXAuth.h */,
+				4EDBA19622F43C83006A77EA /* WXAuth.m */,
 				4E18986422D46E0300664AB8 /* Main.storyboard */,
 				4E18986722D46E0400664AB8 /* Assets.xcassets */,
 				4E18986922D46E0400664AB8 /* LaunchScreen.storyboard */,
@@ -357,7 +357,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E1D76A222D5C4E800C7E46B /* WXAuth.m in Sources */,
+				4EDBA19822F43C83006A77EA /* WXAuth.m in Sources */,
 				4E18986322D46E0300664AB8 /* ViewController.m in Sources */,
 				4E18986E22D46E0400664AB8 /* main.m in Sources */,
 				4E18986022D46E0300664AB8 /* AppDelegate.m in Sources */,
