@@ -19,14 +19,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
-//- (IBAction)shareMessageToChat:(id)sender {
-//    [WXAUTH sendWXMessageAuthReq];
-//}
-//- (IBAction)shareMessageToFriendsCircle:(id)sender {
-//    
-//}
+
 - (IBAction)weixinLogin:(id)sender {
-    [WXAUTH sendWXAuthReq];
+    [WXAUTH loginWXAuthReq];
+}
+- (IBAction)weixinPay:(id)sender {
+    [WXAUTH jumpToBizPay];
 }
 
 - (IBAction)textShare:(id)sender {

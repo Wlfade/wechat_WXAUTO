@@ -45,7 +45,7 @@ return _sharedObject; \
     return WXAppId;
 }
 
-- (void)sendWXAuthReq{
+- (void)loginWXAuthReq{
     
     if([WXApi isWXAppInstalled]){//判断用户是否已安装微信App
         
@@ -59,11 +59,13 @@ return _sharedObject; \
         NSLog(@"未安装微信应用或版本过低");
     }
 }
+
 - (BOOL)handleOpenURL:(NSURL *)url{
     
     //处理回调（从微信返回原来的APP时候使用）
     if([url.host isEqualToString:@"platformId=wechat"] || [url.host isEqualToString:@"oauth"]){//微信WeChat分享回调
         
+        //调用微信回调代理
         return [WXApi handleOpenURL:url delegate:self];
     }else{
         
@@ -74,7 +76,7 @@ return _sharedObject; \
 /**
  Delegate回调方法
  */
-- (void)onResp:(id)resp{
+- (void)onResp:(BaseResp *)resp{
     if([resp isKindOfClass:[SendAuthResp class]]){//判断是否为授权登录类
         
         SendAuthResp *req = (SendAuthResp *)resp;
@@ -106,11 +108,28 @@ return _sharedObject; \
         
         SendMessageToWXResp *req = (SendMessageToWXResp *)resp;
         //这里不再返回用户是否分享完成事件，即原先的cancel事件和success事件将统一为success事件
-        //        if(req.errCode == 0){
-        //            //分享成功
-        //        }
+        if(req.errCode == 0){
+            NSLog(@"分享成功");
+        }
+    }
+    
+    if([resp isKindOfClass:[PayResp class]]){
+        switch (resp.errCode) {
+            case WXSuccess:{
+                NSLog(@"支付成功");
+            }
+                break;
+            default:{
+                NSLog(@"支付失败:%d",resp.errCode);
+            }
+            break;
+        }
     }
 }
+
+/**
+ 通过回调代理code 获取openid 方法
+ */
 - (void)get:(NSString *)code completion:(void (^)(NSDictionary *))completion
 {
     NSString *urlStr = [NSString stringWithFormat:@"https://api.weixin.qq.com/sns/oauth2/access_token?appid=wx7a375905493d4be9&secret=b923f78beab716e42ed8be588790e3d3&code=%@&grant_type=authorization_code",code];
@@ -138,6 +157,8 @@ return _sharedObject; \
     // 启动任务
     [task resume];
 }
+
+/** 获取用户的信息的方法 */
 - (void)getAccess_token:(NSString *)access_token openId:(NSString *)openId completion:(void (^)(NSDictionary *))completion
 {
     NSString *urlStr = [NSString stringWithFormat:@"https://api.weixin.qq.com/sns/userinfo?access_token=%@&openid=%@",access_token,openId];
@@ -150,6 +171,7 @@ return _sharedObject; \
         NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
         
         completion(dictionary);
+        NSLog(@"微信用户名：%@",dictionary[@"nickname"]);
         /*
          {
          "openid":"OPENID", //用户的标识，对当前开发者帐号唯一
@@ -167,36 +189,35 @@ return _sharedObject; \
     // 启动任务
     [task resume];
 }
-//- (void)sendWXMessageAuthReq{
-//    if([WXApi isWXAppInstalled]){//判断当前设备是否安装微信客户端
-//        
-//        //创建多媒体消息结构体
-//        WXMediaMessage *message = [WXMediaMessage message];
-//        message.title = @"【爆款直降 盛夏特惠】【29.9免邮 限量买3免1】清新持久自然GUCCMI香水";//标题
-//        message.description = @"我在京东发现了一个不错的商品，赶快来看看吧。";//描述
-//        [message setThumbImage:[UIImage imageNamed:@"appicon-60pt"]];//设置预览图
-//        
-//        //创建网页数据对象
-//        WXWebpageObject *webObj = [WXWebpageObject object];
-//        //        webObj.webpageUrl = @"[https://open.weixin.qq.com](https://open.weixin.qq.com)";//链接
-//        webObj.webpageUrl = @"https://baidu.com";//链接
-//        
-//        message.mediaObject = webObj;
-//        
-//        SendMessageToWXReq *sendReq = [[SendMessageToWXReq alloc] init];
-//        sendReq.bText = NO;//不使用文本信息
-//        sendReq.message = message;
-//        //        sendReq.scene = WXSceneSession;//分享到好友会话
-//        sendReq.scene = WXSceneTimeline;//分享到好友会话
-//        
-//        
-//        [WXApi sendReq:sendReq];//发送对象实例
-//    }else{
-//        
-//        //未安装微信应用或版本过低
-//        NSLog(@"未安装微信应用或版本过低");
-//    }
-//}
+
+
+/** 跳转到微信支付 */
+- (void)jumpToBizPay{
+    
+    if(![WXApi isWXAppInstalled]){//判断当前设备是否安装微信客户端
+        //未安装微信应用或版本过低
+        NSLog(@"未安装微信应用或版本过低");
+        return;
+    }
+    
+    // 调起微信支付
+    PayReq *request = [[PayReq alloc] init];
+    /** 微信分配的公众账号ID -> APPID */
+    request.partnerId = WXAppId;
+    /** 预支付订单 从服务器获取 */
+    request.prepayId = @"1101000000140415649af9fc314aa427";
+    /** 商家根据财付通文档填写的数据和签名 <暂填写固定值Sign=WXPay>*/
+    request.package = @"Sign=WXPay";
+    /** 随机串，防重发 */
+    request.nonceStr= @"a462b76e7436e98e0ed6e13c64b4fd1c";
+    /** 时间戳，防重发 */
+    request.timeStamp= 1397527777;
+    /** 商家根据微信开放平台文档对数据做的签名, 可从服务器获取，也可本地生成*/
+    request.sign= @"582282D72DD2B03AD892830965F428CB16E7A256";
+    /* 调起支付 */
+    [WXApi sendReq:request];
+
+}
 
 - (void)shareToWechatWithText:(NSString *)content type:(NSUInteger)type {
     if([WXApi isWXAppInstalled]){//判断当前设备是否安装微信客户端

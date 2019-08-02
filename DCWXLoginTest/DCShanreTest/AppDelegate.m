@@ -25,6 +25,7 @@
     return YES;
 }
 
+//微信返回是 调用这个代理方法然后 调用自己工具类方法
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options{
     
     return [WXAUTH handleOpenURL:url];

@@ -20,10 +20,12 @@
 
 - (BOOL)handleOpenURL:(NSURL *)url;
 
-- (void)sendWXAuthReq;
-//- (void)sendWXMessageAuthReq;
 
+/** 微信登录 */
+- (void)loginWXAuthReq;
 
+/** 跳转到微信支付 */
+- (void)jumpToBizPay;
 /**
  * 分享文字
  * content: 需要分享的文字内容

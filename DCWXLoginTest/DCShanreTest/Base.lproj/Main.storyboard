@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hAQ-Pb-cex">
-                                <rect key="frame" x="168" y="343" width="78" height="251"/>
+                                <rect key="frame" x="168" y="343" width="78" height="291"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x0p-2g-5Wo">
@@ -29,8 +29,15 @@
                                             <action selector="weixinLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rQV-ni-Cc3"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pi8-fm-o70">
+                                        <rect key="frame" x="0.0" y="40" width="62" height="30"/>
+                                        <state key="normal" title="微信支付"/>
+                                        <connections>
+                                            <action selector="weixinPay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mxN-3c-vFo"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xaD-WY-pvk">
-                                        <rect key="frame" x="0.0" y="40" width="78" height="35"/>
+                                        <rect key="frame" x="0.0" y="80" width="78" height="35"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                         <state key="normal" title="分享文字">
                                             <color key="titleColor" red="1" green="0.42946053810000001" blue="0.2811122513" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -40,7 +47,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="57Q-lD-v6A">
-                                        <rect key="frame" x="0.0" y="85" width="74" height="34"/>
+                                        <rect key="frame" x="0.0" y="125" width="74" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <state key="normal" title="分享图片">
                                             <color key="titleColor" red="1" green="0.25544275986877341" blue="0.11776441303183349" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -50,7 +57,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3B-gE-KwX">
-                                        <rect key="frame" x="0.0" y="129" width="74" height="34"/>
+                                        <rect key="frame" x="0.0" y="169" width="74" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <state key="normal" title="分享音乐">
                                             <color key="titleColor" red="1" green="0.25544275989999998" blue="0.117764413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -60,7 +67,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eDQ-9c-zjW">
-                                        <rect key="frame" x="0.0" y="173" width="74" height="34"/>
+                                        <rect key="frame" x="0.0" y="213" width="74" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <state key="normal" title="分享视频">
                                             <color key="titleColor" red="1" green="0.25544275989999998" blue="0.117764413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -70,7 +77,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VfC-sh-JNT">
-                                        <rect key="frame" x="0.0" y="217" width="74" height="34"/>
+                                        <rect key="frame" x="0.0" y="257" width="74" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <state key="normal" title="分享网页">
                                             <color key="titleColor" red="1" green="0.25544275989999998" blue="0.117764413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
