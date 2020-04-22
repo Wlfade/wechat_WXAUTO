@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,78 +16,105 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hAQ-Pb-cex">
-                                <rect key="frame" x="168" y="343" width="78" height="291"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZKu-Lh-qSA">
+                                <rect key="frame" x="10" y="144" width="394" height="400"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x0p-2g-5Wo">
-                                        <rect key="frame" x="0.0" y="0.0" width="62" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YEE-jP-feZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="139"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="139" id="LwZ-O5-w6R"/>
+                                        </constraints>
                                         <state key="normal" title="微信登录"/>
-                                        <connections>
-                                            <action selector="weixinLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rQV-ni-Cc3"/>
-                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pi8-fm-o70">
-                                        <rect key="frame" x="0.0" y="40" width="62" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y9d-pu-ulj">
+                                        <rect key="frame" x="0.0" y="149" width="394" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Fiw-lg-uQK"/>
+                                        </constraints>
                                         <state key="normal" title="微信支付"/>
-                                        <connections>
-                                            <action selector="weixinPay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mxN-3c-vFo"/>
-                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xaD-WY-pvk">
-                                        <rect key="frame" x="0.0" y="80" width="78" height="35"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aXL-6z-4kp">
+                                        <rect key="frame" x="0.0" y="189" width="394" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="ek6-Cf-GwS"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                         <state key="normal" title="分享文字">
                                             <color key="titleColor" red="1" green="0.42946053810000001" blue="0.2811122513" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
-                                        <connections>
-                                            <action selector="textShare:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tyP-tC-DzT"/>
-                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="57Q-lD-v6A">
-                                        <rect key="frame" x="0.0" y="125" width="74" height="34"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F6V-QR-Rs6">
+                                        <rect key="frame" x="0.0" y="234" width="394" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="7d8-Eh-6v1"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <state key="normal" title="分享图片">
-                                            <color key="titleColor" red="1" green="0.25544275986877341" blue="0.11776441303183349" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" red="1" green="0.25544275989999998" blue="0.117764413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
-                                        <connections>
-                                            <action selector="imageShare:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KyJ-S4-jqO"/>
-                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3B-gE-KwX">
-                                        <rect key="frame" x="0.0" y="169" width="74" height="34"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2bX-ij-I0s">
+                                        <rect key="frame" x="0.0" y="278" width="394" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="AqF-tm-cS0"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <state key="normal" title="分享音乐">
                                             <color key="titleColor" red="1" green="0.25544275989999998" blue="0.117764413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
-                                        <connections>
-                                            <action selector="musicShare:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rsv-N2-wA2"/>
-                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eDQ-9c-zjW">
-                                        <rect key="frame" x="0.0" y="213" width="74" height="34"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s88-2V-SZz">
+                                        <rect key="frame" x="0.0" y="322" width="394" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="Dix-D0-5Hr"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <state key="normal" title="分享视频">
                                             <color key="titleColor" red="1" green="0.25544275989999998" blue="0.117764413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
-                                        <connections>
-                                            <action selector="videoShare:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WQH-VM-ep0"/>
-                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VfC-sh-JNT">
-                                        <rect key="frame" x="0.0" y="257" width="74" height="34"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L77-AO-mp8">
+                                        <rect key="frame" x="0.0" y="366" width="394" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="gWC-Uv-6xn"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <state key="normal" title="分享网页">
                                             <color key="titleColor" red="1" green="0.25544275989999998" blue="0.117764413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
-                                        <connections>
-                                            <action selector="webShare:" destination="BYZ-38-t0r" eventType="touchUpInside" id="033-eP-u3v"/>
-                                        </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="s88-2V-SZz" firstAttribute="leading" secondItem="ZKu-Lh-qSA" secondAttribute="leading" id="4Xt-Sg-dc1"/>
+                                    <constraint firstItem="2bX-ij-I0s" firstAttribute="top" secondItem="F6V-QR-Rs6" secondAttribute="bottom" constant="10" id="Ada-TV-ZN8"/>
+                                    <constraint firstAttribute="trailing" secondItem="L77-AO-mp8" secondAttribute="trailing" id="G2p-qL-Ndv"/>
+                                    <constraint firstItem="YEE-jP-feZ" firstAttribute="leading" secondItem="ZKu-Lh-qSA" secondAttribute="leading" id="GJK-iT-u2c"/>
+                                    <constraint firstAttribute="trailing" secondItem="y9d-pu-ulj" secondAttribute="trailing" id="KTT-TP-pfh"/>
+                                    <constraint firstAttribute="trailing" secondItem="2bX-ij-I0s" secondAttribute="trailing" id="LoD-XW-F0I"/>
+                                    <constraint firstItem="s88-2V-SZz" firstAttribute="top" secondItem="2bX-ij-I0s" secondAttribute="bottom" constant="10" id="M3n-s4-fBv"/>
+                                    <constraint firstItem="aXL-6z-4kp" firstAttribute="top" secondItem="y9d-pu-ulj" secondAttribute="bottom" constant="10" id="Sgf-bz-oLi"/>
+                                    <constraint firstAttribute="trailing" secondItem="aXL-6z-4kp" secondAttribute="trailing" id="VpA-XL-blf"/>
+                                    <constraint firstItem="aXL-6z-4kp" firstAttribute="leading" secondItem="ZKu-Lh-qSA" secondAttribute="leading" id="aSR-a2-mno"/>
+                                    <constraint firstItem="L77-AO-mp8" firstAttribute="top" secondItem="s88-2V-SZz" secondAttribute="bottom" constant="10" id="aWJ-Sg-VSe"/>
+                                    <constraint firstItem="F6V-QR-Rs6" firstAttribute="leading" secondItem="ZKu-Lh-qSA" secondAttribute="leading" id="dTJ-mn-sET"/>
+                                    <constraint firstItem="YEE-jP-feZ" firstAttribute="top" secondItem="ZKu-Lh-qSA" secondAttribute="top" id="fHn-MR-BPF"/>
+                                    <constraint firstItem="F6V-QR-Rs6" firstAttribute="top" secondItem="aXL-6z-4kp" secondAttribute="bottom" constant="10" id="hde-J5-gLY"/>
+                                    <constraint firstItem="L77-AO-mp8" firstAttribute="leading" secondItem="ZKu-Lh-qSA" secondAttribute="leading" id="kpj-N0-MCx"/>
+                                    <constraint firstAttribute="trailing" secondItem="YEE-jP-feZ" secondAttribute="trailing" id="kyw-jX-RDA"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="400" id="m18-Um-m1W"/>
+                                    <constraint firstItem="y9d-pu-ulj" firstAttribute="leading" secondItem="ZKu-Lh-qSA" secondAttribute="leading" id="u1o-BD-hWp"/>
+                                    <constraint firstAttribute="trailing" secondItem="s88-2V-SZz" secondAttribute="trailing" id="uRs-JT-zmL"/>
+                                    <constraint firstAttribute="trailing" secondItem="F6V-QR-Rs6" secondAttribute="trailing" id="xdE-9a-tXK"/>
+                                    <constraint firstItem="2bX-ij-I0s" firstAttribute="leading" secondItem="ZKu-Lh-qSA" secondAttribute="leading" id="xhH-XK-i6S"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ZKu-Lh-qSA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="6Do-zG-0Pg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZKu-Lh-qSA" secondAttribute="trailing" constant="10" id="9ZA-cr-R3J"/>
+                            <constraint firstItem="ZKu-Lh-qSA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="GUJ-1Q-4Ae"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
